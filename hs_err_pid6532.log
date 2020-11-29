@@ -1,0 +1,257 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0xffffffffa3205120, pid=6532, tid=7108
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_91-b14) (build 1.8.0_91-b14)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.91-b14 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# C  0xffffffffa3205120
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000154b0800):  JavaThread "AWT-EventQueue-0" [_thread_in_Java, id=7108, stack(0x0000000015940000,0x0000000015a40000)]
+
+siginfo: ExceptionCode=0xc0000005, ExceptionInformation=0x0000000000000008 0xffffffffa3205120
+
+Registers:
+RAX=0x00000001001085a0, RBX=0x0000000013a90c00, RCX=0x0000000000000000, RDX=0x00000000f051bc48
+RSP=0x0000000015a3cc78, RBP=0x0000000015a3cfe0, RSI=0x00000000f0452a40, RDI=0x00000001001085a0
+R8 =0x00000000f0452a08, R9 =0x00000000f051bc48, R10=0x000000010001bcf8, R11=0x0000000000000000
+R12=0x0000000000000000, R13=0x0000000015a3cf68, R14=0x0000000015a3d000, R15=0x00000000154b0800
+RIP=0xffffffffa3205120, EFLAGS=0x0000000000010216
+
+Top of Stack: (sp=0x0000000015a3cc78)
+0x0000000015a3cc78:   0000000002411094 0000000000000000
+0x0000000015a3cc88:   000000006fc06a41 000000001544f970
+0x0000000015a3cc98:   000000000000000b 00000000073f6e4a
+0x0000000015a3cca8:   000000006fc7bc8b 00000000f051bc48
+0x0000000015a3ccb8:   beebf170bae29200 000000003ea6a6a6
+0x0000000015a3ccc8:   0000000013965b70 0000000015a3cfe0
+0x0000000015a3ccd8:   00000000023c80bc 00000000f0452a40
+0x0000000015a3cce8:   00000000962eb80f 00000000f051bc48
+0x0000000015a3ccf8:   00000000f0518da0 0000000013d638a0
+0x0000000015a3cd08:   000000006fc06b98 0000000015a3cfe0
+0x0000000015a3cd18:   000000000239b6c4 0000000013d63c78
+0x0000000015a3cd28:   0000000015a3cd88 0000000000000097
+0x0000000015a3cd38:   000000006fdabab2 0000000000000000
+0x0000000015a3cd48:   0000000000000000 0000000000000014
+0x0000000015a3cd58:   000000006fc8457b 00000000f02e52e0
+0x0000000015a3cd68:   00000000f051bc48 00000000154b0800 
+
+Instructions: (pc=0xffffffffa3205120)
+0xffffffffa3205100:   
+[error occurred during error reporting (printing registers, top of stack, instructions near pc), id 0xc0000005]
+
+Register to memory mapping:
+
+RAX=0x00000001001085a0 is pointing into metadata
+RBX={method} {0x0000000013a90c08} 'equals' '(Ljava/lang/Object;)Z' in 'javax/swing/plaf/nimbus/DerivedColor$UIResource'
+RCX=0x0000000000000000 is an unknown value
+RDX=0x00000000f051bc48 is an oop
+javax.swing.plaf.nimbus.DerivedColor$UIResource 
+ - klass: 'javax/swing/plaf/nimbus/DerivedColor$UIResource'
+RSP=0x0000000015a3cc78 is pointing into the stack for thread: 0x00000000154b0800
+RBP=0x0000000015a3cfe0 is pointing into the stack for thread: 0x00000000154b0800
+RSI=0x00000000f0452a40 is an oop
+java.util.HashMap$Node 
+ - klass: 'java/util/HashMap$Node'
+RDI=0x00000001001085a0 is pointing into metadata
+R8 =0x00000000f0452a08 is an oop
+javax.swing.plaf.nimbus.DerivedColor$UIResource 
+ - klass: 'javax/swing/plaf/nimbus/DerivedColor$UIResource'
+R9 =0x00000000f051bc48 is an oop
+javax.swing.plaf.nimbus.DerivedColor$UIResource 
+ - klass: 'javax/swing/plaf/nimbus/DerivedColor$UIResource'
+R10=0x000000010001bcf8 is pointing into metadata
+R11=0x0000000000000000 is an unknown value
+R12=0x0000000000000000 is an unknown value
+R13=0x0000000015a3cf68 is pointing into the stack for thread: 0x00000000154b0800
+R14=0x0000000015a3d000 is pointing into the stack for thread: 0x00000000154b0800
+R15=0x00000000154b0800 is a thread
+
+
+Stack: [0x0000000015940000,0x0000000015a40000],  sp=0x0000000015a3cc78,  free space=1011k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  0xffffffffa3205120
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000002100800 JavaThread "DestroyJavaVM" [_thread_blocked, id=6608, stack(0x0000000002000000,0x0000000002100000)]
+=>0x00000000154b0800 JavaThread "AWT-EventQueue-0" [_thread_in_Java, id=7108, stack(0x0000000015940000,0x0000000015a40000)]
+  0x0000000015451800 JavaThread "AWT-Windows" daemon [_thread_in_native, id=5836, stack(0x0000000015820000,0x0000000015920000)]
+  0x0000000015405000 JavaThread "AWT-Shutdown" [_thread_blocked, id=4944, stack(0x0000000015720000,0x0000000015820000)]
+  0x0000000015403800 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=4332, stack(0x0000000015620000,0x0000000015720000)]
+  0x0000000013da2800 JavaThread "Service Thread" daemon [_thread_blocked, id=224, stack(0x0000000014f40000,0x0000000015040000)]
+  0x0000000013d2c800 JavaThread "C1 CompilerThread1" daemon [_thread_blocked, id=5528, stack(0x0000000014e40000,0x0000000014f40000)]
+  0x0000000013d2a800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=3140, stack(0x0000000014d40000,0x0000000014e40000)]
+  0x0000000013d29000 JavaThread "Attach Listener" daemon [_thread_blocked, id=1112, stack(0x0000000014c40000,0x0000000014d40000)]
+  0x0000000013d26000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=6500, stack(0x0000000014b40000,0x0000000014c40000)]
+  0x00000000021f4800 JavaThread "Finalizer" daemon [_thread_blocked, id=3092, stack(0x0000000014960000,0x0000000014a60000)]
+  0x00000000021eb800 JavaThread "Reference Handler" daemon [_thread_blocked, id=5808, stack(0x0000000014860000,0x0000000014960000)]
+
+Other Threads:
+  0x0000000013cf6000 VMThread [stack: 0x0000000014760000,0x0000000014860000] [id=7072]
+  0x0000000013da8800 WatcherThread [stack: 0x0000000015040000,0x0000000015140000] [id=5472]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 14336K, used 5448K [0x00000000f0000000, 0x00000000f1000000, 0x0000000100000000)
+  eden space 12288K, 44% used [0x00000000f0000000,0x00000000f05520c8,0x00000000f0c00000)
+  from space 2048K, 0% used [0x00000000f0e00000,0x00000000f0e00000,0x00000000f1000000)
+  to   space 2048K, 0% used [0x00000000f0c00000,0x00000000f0c00000,0x00000000f0e00000)
+ ParOldGen       total 32768K, used 0K [0x00000000d0000000, 0x00000000d2000000, 0x00000000f0000000)
+  object space 32768K, 0% used [0x00000000d0000000,0x00000000d0000000,0x00000000d2000000)
+ Metaspace       used 10618K, capacity 10818K, committed 11008K, reserved 1058816K
+  class space    used 1390K, capacity 1469K, committed 1536K, reserved 1048576K
+
+Card table byte_map: [0x00000000115c0000,0x0000000011750000] byte_map_base: 0x0000000010f40000
+
+Marking Bits: (ParMarkBitMap*) 0x00000000703a2f70
+ Begin Bits: [0x0000000011a50000, 0x0000000012650000)
+ End Bits:   [0x0000000012650000, 0x0000000013250000)
+
+Polling page: 0x0000000001eb0000
+
+CodeCache: size=245760Kb used=2165Kb max_used=2177Kb free=243594Kb
+ bounds [0x0000000002200000, 0x0000000002470000, 0x0000000011200000]
+ total_blobs=869 nmethods=462 adapters=322
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 0.576 Thread 0x0000000013d2c800  459       3       javax.swing.JComponent::setFlag (34 bytes)
+Event: 0.576 Thread 0x0000000013d2c800 nmethod 459 0x00000000024191d0 code [0x0000000002419320, 0x0000000002419510]
+Event: 0.576 Thread 0x0000000013d2c800  460       3       javax.swing.JComponent::firePropertyChange (8 bytes)
+Event: 0.577 Thread 0x0000000013d2c800 nmethod 460 0x0000000002419590 code [0x0000000002419720, 0x0000000002419ca8]
+Event: 0.577 Thread 0x0000000013d2c800  461       3       javax.swing.JComponent::getFlag (20 bytes)
+Event: 0.577 Thread 0x0000000013d2c800 nmethod 461 0x0000000002419ed0 code [0x000000000241a020, 0x000000000241a1f0]
+Event: 0.578 Thread 0x0000000013d2a800 nmethod 438 0x000000000241dc50 code [0x000000000241de20, 0x000000000241eba8]
+Event: 0.578 Thread 0x0000000013d2a800  448       4       javax.swing.plaf.nimbus.DerivedColor$UIResource::equals (21 bytes)
+Event: 0.581 Thread 0x0000000013d2a800 nmethod 448 0x000000000241b0d0 code [0x000000000241b220, 0x000000000241b558]
+Event: 0.581 Thread 0x0000000013d2a800  462   !   4       javax.swing.UIManager::maybeInitialize (36 bytes)
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (3 events):
+Event: 0.268 Thread 0x0000000002100800 Uncommon trap: reason=null_check action=make_not_entrant pc=0x0000000002378f5c method=java.lang.String.equals(Ljava/lang/Object;)Z @ 8
+Event: 0.569 Thread 0x00000000154b0800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000023d9478 method=java.util.HashMap.getNode(ILjava/lang/Object;)Ljava/util/HashMap$Node; @ 84
+Event: 0.569 Thread 0x00000000154b0800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000023e58dc method=java.util.HashMap.getNode(ILjava/lang/Object;)Ljava/util/HashMap$Node; @ 84
+
+Internal exceptions (10 events):
+Event: 0.341 Thread 0x0000000002100800 Exception <a 'java/lang/ClassNotFoundException': ToolBar> (0x00000000f033d948) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u91\6644\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 0.341 Thread 0x0000000002100800 Exception <a 'java/lang/ClassNotFoundException': ToggleButton> (0x00000000f033def8) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u91\6644\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 0.341 Thread 0x0000000002100800 Exception <a 'java/lang/ClassNotFoundException': javax/swing/JToolBarSeparator> (0x00000000f033e358) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u91\6644\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 0.341 Thread 0x0000000002100800 Exception <a 'java/lang/ClassNotFoundException': ToolBarSeparator> (0x00000000f033e7f0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u91\6644\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 0.341 Thread 0x0000000002100800 Exception <a 'java/lang/ClassNotFoundException': ToolTip> (0x00000000f033ef30) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u91\6644\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 0.343 Thread 0x0000000002100800 Exception <a 'java/lang/ClassNotFoundException': Tree> (0x00000000f033fb50) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u91\6644\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 0.343 Thread 0x0000000002100800 Exception <a 'java/lang/ClassNotFoundException': Tree> (0x00000000f0340290) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u91\6644\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 0.343 Thread 0x0000000002100800 Exception <a 'java/lang/ClassNotFoundException': javax/swing/JTreeCell> (0x00000000f0340610) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u91\6644\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 0.343 Thread 0x0000000002100800 Exception <a 'java/lang/ClassNotFoundException': TreeCell> (0x00000000f0340a98) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u91\6644\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 0.344 Thread 0x0000000002100800 Exception <a 'java/lang/ClassNotFoundException': RootPane> (0x00000000f03414f8) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u91\6644\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+
+Events (10 events):
+Event: 0.578 loading class javax/swing/plaf/basic/BasicTabbedPaneUI done
+Event: 0.578 loading class javax/swing/plaf/synth/SynthTabbedPaneUI done
+Event: 0.579 loading class javax/swing/plaf/synth/SynthTabbedPaneUI$2
+Event: 0.579 loading class javax/swing/plaf/basic/BasicTabbedPaneUI$TabbedPaneLayout
+Event: 0.579 loading class javax/swing/plaf/basic/BasicTabbedPaneUI$TabbedPaneLayout done
+Event: 0.579 loading class javax/swing/plaf/synth/SynthTabbedPaneUI$2 done
+Event: 0.579 loading class javax/swing/plaf/basic/BasicTabbedPaneUI$TabbedPaneScrollLayout
+Event: 0.579 loading class javax/swing/plaf/basic/BasicTabbedPaneUI$TabbedPaneScrollLayout done
+Event: 0.580 loading class javax/swing/plaf/nimbus/TabbedPaneTabPainter
+Event: 0.580 loading class javax/swing/plaf/nimbus/TabbedPaneTabPainter done
+
+
+Dynamic libraries:
+0x00007ff6560f0000 - 0x00007ff656127000 	C:\Program Files\Java\jdk1.8.0_91\bin\java.exe
+0x00007ffb8e710000 - 0x00007ffb8e8d2000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffb8e5e0000 - 0x00007ffb8e68d000 	C:\Windows\system32\KERNEL32.DLL
+0x00007ffb8b3f0000 - 0x00007ffb8b5cd000 	C:\Windows\system32\KERNELBASE.dll
+0x00007ffb8bdd0000 - 0x00007ffb8be76000 	C:\Windows\system32\ADVAPI32.dll
+0x00007ffb8dc10000 - 0x00007ffb8dcad000 	C:\Windows\system32\msvcrt.dll
+0x00007ffb8c3e0000 - 0x00007ffb8c43b000 	C:\Windows\system32\sechost.dll
+0x00007ffb8df50000 - 0x00007ffb8e076000 	C:\Windows\system32\RPCRT4.dll
+0x00007ffb8bfb0000 - 0x00007ffb8c0fe000 	C:\Windows\system32\USER32.dll
+0x00007ffb8e290000 - 0x00007ffb8e415000 	C:\Windows\system32\GDI32.dll
+0x00007ffb7f1a0000 - 0x00007ffb7f414000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.10240.17184_none_f41d7a705752bce6\COMCTL32.dll
+0x00007ffb8e250000 - 0x00007ffb8e286000 	C:\Windows\system32\IMM32.DLL
+0x00007ffb8e080000 - 0x00007ffb8e1dc000 	C:\Windows\system32\MSCTF.dll
+0x000000006fab0000 - 0x000000006fb82000 	C:\Program Files\Java\jdk1.8.0_91\jre\bin\msvcr100.dll
+0x000000006fb90000 - 0x0000000070423000 	C:\Program Files\Java\jdk1.8.0_91\jre\bin\server\jvm.dll
+0x00007ffb8e5d0000 - 0x00007ffb8e5d8000 	C:\Windows\system32\PSAPI.DLL
+0x00007ffb79460000 - 0x00007ffb79469000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffb8e1e0000 - 0x00007ffb8e249000 	C:\Windows\system32\WS2_32.dll
+0x00007ffb8e690000 - 0x00007ffb8e698000 	C:\Windows\system32\NSI.dll
+0x00007ffb89b60000 - 0x00007ffb89b83000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffb87310000 - 0x00007ffb8731a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffb89b30000 - 0x00007ffb89b5c000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x00007ffb8b3a0000 - 0x00007ffb8b3e4000 	C:\Windows\system32\cfgmgr32.dll
+0x00007ffb8ae70000 - 0x00007ffb8ae97000 	C:\Windows\SYSTEM32\DEVOBJ.dll
+0x000000006fa60000 - 0x000000006fa6f000 	C:\Program Files\Java\jdk1.8.0_91\jre\bin\verify.dll
+0x000000006fa30000 - 0x000000006fa59000 	C:\Program Files\Java\jdk1.8.0_91\jre\bin\java.dll
+0x000000006fa10000 - 0x000000006fa26000 	C:\Program Files\Java\jdk1.8.0_91\jre\bin\zip.dll
+0x00007ffb8c6e0000 - 0x00007ffb8dc03000 	C:\Windows\system32\SHELL32.dll
+0x00007ffb8b740000 - 0x00007ffb8bd69000 	C:\Windows\system32\windows.storage.dll
+0x00007ffb8c440000 - 0x00007ffb8c6bc000 	C:\Windows\system32\combase.dll
+0x00007ffb8dd90000 - 0x00007ffb8dde1000 	C:\Windows\system32\shlwapi.dll
+0x00007ffb8b130000 - 0x00007ffb8b13f000 	C:\Windows\system32\kernel.appcore.dll
+0x00007ffb8b5d0000 - 0x00007ffb8b683000 	C:\Windows\system32\shcore.dll
+0x00007ffb8b140000 - 0x00007ffb8b18a000 	C:\Windows\system32\powrprof.dll
+0x00007ffb8b190000 - 0x00007ffb8b1a3000 	C:\Windows\system32\profapi.dll
+0x000000006f830000 - 0x000000006f9c8000 	C:\Program Files\Java\jdk1.8.0_91\jre\bin\awt.dll
+0x00007ffb8be80000 - 0x00007ffb8bf42000 	C:\Windows\system32\OLEAUT32.dll
+0x00007ffb890a0000 - 0x00007ffb89118000 	C:\Windows\system32\apphelp.dll
+0x00007ffb89140000 - 0x00007ffb891d6000 	C:\Windows\system32\uxtheme.dll
+0x00007ffb88ab0000 - 0x00007ffb88ad2000 	C:\Windows\system32\dwmapi.dll
+0x00007ffb8de00000 - 0x00007ffb8df41000 	C:\Windows\system32\ole32.dll
+0x00007ffb8af50000 - 0x00007ffb8afbb000 	C:\Windows\SYSTEM32\bcryptPrimitives.dll
+0x000000006f7e0000 - 0x000000006f827000 	C:\Program Files\Java\jdk1.8.0_91\jre\bin\fontmanager.dll
+0x00007ffb6e6b0000 - 0x00007ffb6e8c0000 	C:\Windows\system32\d3d9.dll
+0x00007ffb6a420000 - 0x00007ffb6b4d6000 	C:\Windows\SYSTEM32\nvd3dumx.dll
+0x0000000180000000 - 0x0000000180142000 	C:\Windows\system32\nvspcap64.dll
+0x00007ffb8b1d0000 - 0x00007ffb8b391000 	C:\Windows\system32\CRYPT32.dll
+0x00007ffb8b1b0000 - 0x00007ffb8b1c1000 	C:\Windows\system32\MSASN1.dll
+0x00007ffb86850000 - 0x00007ffb86b83000 	C:\Windows\system32\nvapi64.dll
+0x00007ffb8c100000 - 0x00007ffb8c2c5000 	C:\Windows\system32\SETUPAPI.dll
+0x00007ffb85dd0000 - 0x00007ffb85f3a000 	C:\Program Files (x86)\NVIDIA Corporation\3D Vision\nvSCPAPI64.dll
+0x00007ffb6ffd0000 - 0x00007ffb7015a000 	C:\Windows\SYSTEM32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: Restaurant_Management
+java_class_path (initial): C:\Users\sharm\OneDrive\Documents\NetBeansProjects\Restaurant_Mangagement_System\build\classes
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+USERNAME=sharm
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 23 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 10240 (10.0.10240.17113)
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 23 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, tsc
+
+Memory: 4k page, physical 3143860k(476256k free), swap 5230504k(1238444k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.91-b14) for windows-amd64 JRE (1.8.0_91-b14), built on Apr  1 2016 00:58:32 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Fri Mar 10 03:38:33 2017
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
